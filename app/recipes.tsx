@@ -9,6 +9,7 @@ import { backgroundColor } from '../src/colors/color'
 import { useEffect, useState } from 'react'
 import { getRecipesFromGit } from '../api/recipes'
 import { IRecipe } from '../interfaces/IRecipes'
+import { router } from 'expo-router'
 
 export default function Recipes() {
   const [recipes, setRecipes] = useState<IRecipe[]>([])
@@ -31,13 +32,21 @@ export default function Recipes() {
         renderItem={({ item }) => (
           <TouchableOpacity
             style={{
+              borderRadius: 10,
+              backgroundColor: 'white',
               paddingVertical: 10,
               paddingHorizontal: 5,
               borderWidth: 1,
               marginBottom: 5,
             }}
+            onPress={() => router.push({
+              pathname: 'details/[id]',
+              params: { id: item.id, recipe: JSON.stringify(item) }
+            })}
           >
-            <Text>{item.name}</Text>
+            <View style={{ padding: 10, justifyContent: 'center', alignItems: 'center' }}>
+              <Text style={{ fontSize: 14, fontWeight: 'bold' }}>{item.name}</Text>
+            </View>
           </TouchableOpacity>
         )}
         keyExtractor={(item) => item.id.toString()}

@@ -1,5 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native'
-import Home from './src/pages/Home'
+import Home from './app/index'
 
 export default function App() {
   return (
