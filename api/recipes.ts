@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { IRecipe } from '../interfaces/IRecipes'
+import { IRecipe } from '../interfaces/IRecipe'
 
 export async function getRecipesFromGit(): Promise<IRecipe[]> {
   try {

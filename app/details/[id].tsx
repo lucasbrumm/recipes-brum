@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import { useLocalSearchParams, Stack } from 'expo-router'
-import { IRecipe } from '../../interfaces/IRecipes'
+import { IRecipe } from '../../interfaces/IRecipe'
 import { backgroundColor } from '../../src/colors/color'
 
 export default function DetailsScreen() {

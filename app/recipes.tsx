@@ -8,7 +8,7 @@ import {
 import { backgroundColor } from '../src/colors/color'
 import { useEffect, useState } from 'react'
 import { getRecipesFromGit } from '../api/recipes'
-import { IRecipe } from '../interfaces/IRecipes'
+import { IRecipe } from '../interfaces/IRecipe'
 import { router } from 'expo-router'
 
 export default function Recipes() {
